@@ -1,0 +1,509 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+:root{
+	--primary: #f9234d;
+	--secondary: #dfecff;
+	--first: #23347b;
+    --second: #102169;
+	--Light: #717172;
+}
+
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+html{
+	font-size: 16px;
+}
+
+
+body{
+    font-family: 'Overlock', cursive;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+a{
+	text-decoration: none;
+}
+
+
+
+.container{
+	max-width: 1380px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
+.item-align{
+	align-items: center;
+}
+.text-right{
+    align-items: right;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.align{
+    text-align: center;
+}
+.flex-70{
+	flex: 0 1 70%;
+	padding: 2rem;
+    margin: 0.8rem;
+}
+.flex-50{
+	flex: 0 1 50%;
+	padding: 2rem;
+    margin: 0.8rem;
+}
+.flex-46{
+	flex: 0 1 46%;
+	padding: 2rem;
+    margin: 0.8rem;
+}
+.flex-30{
+	flex: 1 1 30%;
+	padding: 2rem;
+    margin: 0.8rem;
+}
+.flex-20{
+	flex: 1 1 20%;
+	padding: 2rem;
+    margin: 0.8rem;
+}
+.padding{
+	padding: 3rem 0;
+}
+.width-full {
+	width: 100%;
+}
+
+
+
+strong{
+    color: var(--primary);
+}
+
+
+
+button{
+	box-shadow: none;
+	border: none;
+	background-color: var(--primary);
+	padding: 0.8rem 1rem;
+	border-radius: 0.2rem;
+    margin: 2rem 0;
+}
+.btn a{
+	color: white;
+	text-transform: capitalize;
+	font-size: 1rem;
+}
+
+
+
+.header{
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 3rem;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.header h5{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+}
+.header a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-right: 1.2rem;
+}
+#toggle, .bars{
+    display: none;
+}
+
+
+
+.hero{
+    background: linear-gradient(rgba(53, 36, 168, 0.8), rgba(53, 36, 168, 0.8)), url(../media/banner.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    top: -18rem;
+    padding-top: 9rem;
+}
+.hero h1{
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+.hero p{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+
+.about img{
+    border-radius: 0.5rem;
+}
+.about h2{
+    padding-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+p{
+    color: var(--Light);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+.join{
+    background-color: var(--secondary);
+}
+h3{
+    padding-top: 3rem;
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+h6{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.join .box{
+    border: 0.3rem dashed var(--primary);
+}
+
+
+
+
+.schedule .circle{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 2px dashed var(--primary);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.schedule .active{
+    background-color: var(--primary);
+}
+.schedule .circle::before{
+    content: "";
+    height: 8rem;
+    border-right: 2px dashed var(--primary);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+}
+.schedule .active date{
+    color: white;
+}
+.schedule date{
+    color: var(--primary);
+    font-size: 1.8rem;
+    text-align: center;
+}
+.schedule img{
+    max-height: 240px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.ad{
+    background-color: var(--secondary);
+}
+.ad .active h6, .ad .active q{
+    color: white;
+}
+.ad .active{
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+}
+.ad q{
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+
+
+.media iframe{
+    border-radius: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.iframe-container{
+    height: 0;
+    padding-bottom: 56.25%;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+.news{
+    background-color: var(--secondary);
+}
+.news a{
+    text-decoration: underline;
+    color: black;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+.news .active{
+    color: var(--primary);
+}
+
+
+
+
+
+.foot-head{
+    background-color: var(--first);
+}
+.foot-head h6{
+    color: white;
+}
+.foot-head a{
+    color: var(--Light);
+}
+.foot-head li a{
+    padding: 0 2rem;
+}
+.foot-head nav a{
+    margin-right: 2rem;
+}
+.foot-bottom{
+    background-color: var(--second);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+@media screen and (max-width:992px) {
+    html{
+		font-size: 14px;
+	}
+    .container{
+        max-width: 960px;
+    }
+}
+@media screen and (max-width:786px) {
+	html{
+		font-size: 12px;
+	}
+    .container{
+        max-width: 720px;
+    }
+	.flex{
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.flex-30, .flex-46, .flex-20, .flex-50, .flex-70{
+		flex: 1 1 100%;
+	}
+	.column{
+		flex-direction: column;
+	}
+	.header li{
+		margin-bottom: 2.5rem;
+	}
+	.header img{
+		width: 30%;
+	}
+    .sm-column{
+        flex-direction: column;
+    }
+    .flex-100{
+        flex: 0 1 100%;
+        margin: 4rem 0;
+    }
+    .wrap{
+        flex-wrap: wrap;
+    }
+    .sm-widthfull{
+        width: 100%;
+    }
+    .nav{
+        display: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        background-color: var(--first);
+        padding-top: 12rem;
+    }
+    #toggle:checked ~ .nav{
+        display: inline-block;
+    }
+    .bars{
+        position: fixed;
+        top: 1.5rem;
+        right: 2rem;
+        z-index: 99;
+        font-size: 2rem;
+        color: white;
+        display: inline-block;
+    }
+    .nav-items{
+        margin: 1rem 0;
+    }
+    .h{
+        height: auto;
+        padding: 6rem 0;
+    }
+    .hero img{
+        max-height: 500px;
+        object-fit: cover;
+        border-top-left-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+    }
+    .schedule .circle{
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        border: 0;
+    }
+    .schedule .circle .active{
+        background-color: transparent;
+        color: var(--primary);
+    }
+    .schedule .circle::before{
+        display: none;
+    }
+	.footer a{
+		margin: 1rem;
+	}
+    .sm-center{
+        text-align: center;
+    }
+}
+@media screen and (max-width:576px) {
+    html{
+		font-size: 10px;
+	}
+    .container{
+        max-width: 540px;
+    }
+}
